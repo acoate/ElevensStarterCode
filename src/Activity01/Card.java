@@ -37,15 +37,16 @@ public class Card {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
                 this.rank = cardRank;
                 this.suit = cardSuit;
-                this.pointvalue = cardPointValue;
+                this.pointValue = cardPointValue;
 
-
+        }
 	/**
 	 * Accesses this <code>Card's</code> suit.
 	 * @return this <code>Card's</code> suit.
 	 */
 	public String suit() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+                return suit;
    }
 
 	/**
@@ -54,6 +55,7 @@ public class Card {
 	 */
 	public String rank() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+                return rank;
 	}
 
    /**
@@ -62,6 +64,7 @@ public class Card {
 	 */
 	public int pointValue() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+                return pointValue;
 	}
 
 	/** Compare this card with the argument.
@@ -72,6 +75,20 @@ public class Card {
 	 */
 	public boolean matches(Card otherCard) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+                private boolean tf = false;
+                if (this.suit.equals(otherCard.suit())){
+                    tf = true;
+                    if (this.rank.equals(otherCard.rank())){
+                        tf = true;
+                    }
+                    else {
+                        tf = false;
+                    }
+                }
+                else {
+                    tf = false;
+                }
+                return tf;
 	}
 
 	/**
@@ -87,5 +104,6 @@ public class Card {
 	@Override
 	public String toString() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+                System.out.println("egg");
 	}
 }
