@@ -75,20 +75,16 @@ public class Card {
 	 */
 	public boolean matches(Card otherCard) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-                private boolean tf = false;
-                if (this.suit.equals(otherCard.suit())){
-                    tf = true;
-                    if (this.rank.equals(otherCard.rank())){
-                        tf = true;
+                if(this.suit.equals(otherCard.suit)) {
+                    if(this.rank.equals(otherCard.rank)) {
+                        if(this.pointValue == otherCard.pointValue) {
+                            return true;
+                        }
+                        else return false;
                     }
-                    else {
-                        tf = false;
-                    }
+                    else return false;
                 }
-                else {
-                    tf = false;
-                }
-                return tf;
+                else return false;
 	}
 
 	/**
@@ -104,6 +100,6 @@ public class Card {
 	@Override
 	public String toString() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-                System.out.println("egg");
+                
 	}
 }
