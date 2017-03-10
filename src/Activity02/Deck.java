@@ -1,3 +1,5 @@
+package Activity02;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -31,6 +33,13 @@ public class Deck {
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+                ArrayList cards = new ArrayList<Card>();
+                for(int i = 0; i < 52; i++) {
+                    Card temp = new Card(ranks[i], suits[i], values[i]);
+                    cards.add(i, temp);
+                    size++;
+            
+                }
 	}
 
 
@@ -40,6 +49,12 @@ public class Deck {
 	 */
 	public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+                if (size == 0) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
 	}
 
 	/**
@@ -48,6 +63,7 @@ public class Deck {
 	 */
 	public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+                return size;
 	}
 
 	/**
@@ -65,6 +81,8 @@ public class Deck {
 	 */
 	public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+                size--;
+                return cards.get(size);
 	}
 
 	/**
